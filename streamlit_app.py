@@ -11,7 +11,6 @@ st.write(
 name_on_order = st.text_input("Name on Smoothie:")
 st.write("The name on your Smoothie will be:", name_on_order)
 
-
 cnx=st.connection("snowflake")
 session=cnx.session()
 #session = get_active_session()
@@ -24,9 +23,7 @@ ingredients_list=st.multiselect(
     max_selections=5
 )
 
-
 if ingredients_list:
-    
     ingredients_string=''
     for fruit_chosen in ingredients_list:
         ingredients_string+=fruit_chosen+' '
